@@ -1,0 +1,34 @@
+{
+  "name": "magpie-rea-updater",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Keeps the global npm package rea-agents up to date for every agent (checks on a timer and when the Magpie window opens; installs automatically when no rea process is running).",
+  "main": "./index.mjs",
+  "magpie": {
+    "page": {
+      "title": "rea Updates",
+      "titles": {
+        "zh": "rea 更新"
+      },
+      "file": "page/index.html"
+    },
+    "panels": [
+      {
+        "slot": "agents",
+        "file": "panel/index.html",
+        "title": "rea-agents",
+        "titles": {
+          "zh": "rea 更新"
+        }
+      }
+    ],
+    "options": {
+      "intervalHours": 6
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangjianjq/magpie-rea-updater.git"
+  }
+}

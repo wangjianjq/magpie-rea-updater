@@ -1,0 +1,8 @@
+body { padding: 16px; max-width: 760px; }
+.muted { opacity: .7; }
+.row { display: flex; gap: 10px; align-items: center; margin: 14px 0; }
+th { text-align: left; padding-right: 16px; white-space: nowrap; vertical-align: top; }
+pre { font-family: ui-monospace, Consolas, monospace; font-size: 12px; white-space: pre-wrap; word-break: break-all; opacity: .85; }
+.err { color: #d33; }
+.warn { color: #e8730c; }
+.ok { color: #2a8; }

@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script src="_magpie/bridge.js"></script>
+<script src="app.js" defer></script>
+<h2>rea 更新</h2>
+<p class="muted">自动保持全局 npm 包 rea-agents 为最新，所有 agent 共用。每隔设定时间检查一次，打开 Magpie 窗口时也会检查（10 分钟内不重复）；发现新版会自动安装，但有 rea 在运行时会暂缓，稍后重试。</p>
+<table id="info">
+  <tr><th>已安装版本</th><td id="installed">…</td></tr>
+  <tr><th>npm 最新</th><td id="latest">…</td></tr>
+  <tr><th>上次检查</th><td id="checked">…</td></tr>
+  <tr><th>状态</th><td id="state">…</td></tr>
+</table>
+<div class="row">
+  <button id="checkBtn" class="primary">立即检查</button>
+  <span id="busy" class="muted"></span>
+</div>
+<div class="row">
+  <label for="interval">自动检查间隔</label>
+  <select id="interval">
+    <option value="1">每 1 小时</option>
+    <option value="6">每 6 小时</option>
+    <option value="12">每 12 小时</option>
+    <option value="24">每 24 小时</option>
+  </select>
+</div>
+<h3>最近日志</h3>
+<pre id="log"></pre>
