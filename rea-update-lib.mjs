@@ -5,6 +5,7 @@
 //  - state shared in rea-update-state.json
 import { spawn } from "node:child_process"
 import fs from "node:fs"
+import os from "node:os"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 
@@ -14,7 +15,7 @@ export const STATE = path.join(BIN, "rea-update-state.json")
 const PF_NODE = "C:\\Program Files\\nodejs\\node.exe"
 export const NODE = fs.existsSync(PF_NODE) ? PF_NODE : process.execPath
 export const NPM = path.join(path.dirname(NODE), "node_modules", "npm", "bin", "npm-cli.js")
-export const PKG_DIR = path.join(process.env.APPDATA || "C:\\Users\\WJ\\AppData\\Roaming", "npm", "node_modules", "rea-agents")
+export const PKG_DIR = path.join(process.env.APPDATA || path.join(os.homedir(), "AppData", "Roaming"), "npm", "node_modules", "rea-agents")
 export const REA = path.join(PKG_DIR, "scripts", "rea.mjs")
 export const STALE_MS = 10 * 60_000
 const NOOP = () => {}

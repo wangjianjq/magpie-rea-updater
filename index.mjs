@@ -76,7 +76,7 @@ function findMagpie() {
     const p = path.join(d, n)
     if (d && fs.existsSync(p)) return (magpieCmd = p)
   }
-  return (magpieCmd = fs.existsSync("C:\\Users\\WJ\\bin\\magpie.exe") ? "C:\\Users\\WJ\\bin\\magpie.exe" : "magpie")
+  return (magpieCmd = "magpie")
 }
 async function writeOptions(opts) {
   const r = await run(findMagpie(), ["plugin", "options", HERE, JSON.stringify(opts)], { timeout: 30_000 })
